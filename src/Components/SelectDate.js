@@ -1,10 +1,10 @@
 import React from "react"
 
-export default function SelectDate({date}){
+export default function SelectDate({date, className}){
     
     return(
         <>
-            <select>
+            <select className={className}>
                 {date.map(e => <option>{e}</option>)}
             </select>
         </>

@@ -1,10 +1,11 @@
 import React from "react"
+import Button from 'react-bootstrap/Button';
 
-export default function Button({label}){
+export default function Buttons({label, className}){
 
     return(
         <>
-            <button type="button">{label}</button>
+            <Button type="button" className={className}>{label}</Button>
         </>
     )
 }

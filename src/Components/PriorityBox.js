@@ -4,8 +4,8 @@ export default function PriorityBox({label}){
 
     return(
         <>
-            <label>{label}</label>
-            <input type="radio" name="drone" className=""></input>
+            <input type="radio" name="drone" className="ms-3"></input>
+            <label className="ms-1 text-light">{label}</label>
         </>
     )
 }

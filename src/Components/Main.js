@@ -18,8 +18,8 @@ export default function Main(){
     const Container = styled.div`
         display: flex;
         justify-content: center;
-        margin: 50px 0 50px 0 ;
-        height: 530px;
+        margin: 50px 0 80px 0 ;
+        height: 670px;
     `
     const Todo = styled.div`
         display: flex;
@@ -47,32 +47,58 @@ export default function Main(){
         <Container>
             <Todo className="d-flex justify-content-center">
                 
-                <div>
-                    <H1 className="text-light">Ma Todolist</H1>
-                    <InputBox label="Faire les courses du mois" />
-                    <InputBox label="Partir chez le médecin"/>
+                <div className="w-50">
+                    <H1 className="text-light mt-3">Ma Todolist</H1>
 
-                    <Button label="Supprimer"/>
+                    <div className="mt-4">
+                        <InputBox label="Faire les courses du mois" />
+                        <InputBox label="Partir chez le médecin"/>
+                    </div>
+                   
+                    <div className="w-100 mt-3 ms-5">
+                        <p className="text-secondary">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor 
+                            incididunt ut labore et dolore 
+                       </p>
+                    </div>
+                    
+                    <Button label="Supprimer" className="btn btn-light mt-2"/>
 
-                    <h3>Nouvelle tâche</h3>
+                    <hr className="border border-light border-2 mt-4"/>
+
+                    <h3 className="mt-4 text-light">Nouvelle tâche</h3>
 
                     <div>
                         <InputTask label="Titre"/>
-                        <InputDescription label="Description"/>
-            
-                        <p>Date de fin</p>
-                        <SelectDate  date={day}/>
-                        <SelectDate  date={month}/>
-                        <SelectDate  date={years}/>
                     </div>
-            
-                    <p>Priotité</p>
-                    <PriorityBox label="Basse"/>
-                    <PriorityBox label="normale"/>
-                    <PriorityBox label="Haute"/>
+                    <div>
+                        <InputDescription label="Description"/>
+                    </div>
 
+                    <div className="d-flex mt-3">
+                        <div>
+                            <p className="text-light">Date de fin</p>
+                        </div>
+                        <div>
+                            <SelectDate  date={day} className="ms-4 rounded-2"/>
+                            <SelectDate  date={month} className="w-25 ms-3 rounded-2 "/>
+                            <SelectDate  date={years} className="w-25 ms-3 rounded-2"/>
+                        </div>
+                    </div>
+    
+                    <div className="d-flex mt-2">
+                        <div>
+                            <p className="text-light">Priotité</p>
+                        </div>
+                        <div className="ms-4">
+                            <PriorityBox label="Basse"/>
+                            <PriorityBox label="normale"/>
+                            <PriorityBox label="Haute"/>
+                        </div>
+                    </div>
 
-                    <Button label="Enregistrer"/>
+                    <div className="d-flex justify-content-end">
+                         <Button label="Enregistrer" className="btn btn-light mt-2 "/>
+                    </div>
                 </div>
             </Todo>
         </Container>

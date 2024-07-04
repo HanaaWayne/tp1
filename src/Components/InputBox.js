@@ -6,7 +6,7 @@ export default function InputBox({label}){
         <>
             <div>
                 <input type="checkbox" />
-                <label>{label}</label>
+                <label className="ms-2 text-light">{label}</label>
             </div>
         </>
     )
